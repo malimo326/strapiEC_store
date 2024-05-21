@@ -1,0 +1,68 @@
+@charset "UTF-8";
+.toggler-wrapper {
+	display: block;
+	width: 45px;
+	height: 25px;
+	cursor: pointer;
+	position: relative;
+}
+
+.toggler-wrapper input[type="checkbox"] {
+	display: none;
+}
+
+.toggler-wrapper input[type="checkbox"]:checked+.toggler-slider {
+	background-color: #44cc66;
+}
+
+.toggler-wrapper .toggler-slider {
+	background-color: #ccc;
+	position: absolute;
+	border-radius: 100px;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+.toggler-wrapper .toggler-knob {
+	position: absolute;
+	-webkit-transition: all 300ms ease;
+	transition: all 300ms ease;
+}
+
+
+/*--------------------------------------------------------------
+3.0 Effects Styles 
+--------------------------------------------------------------*/
+
+
+/*Style 1*/
+
+.toggler-wrapper.style-1 input[type="checkbox"]:checked+.toggler-slider .toggler-knob {
+	left: calc(100% - 19px - 3px);
+}
+
+.toggler-wrapper.style-1 .toggler-knob {
+	width: calc(25px - 6px);
+	height: calc(25px - 6px);
+	border-radius: 50%;
+	left: 3px;
+	top: 3px;
+	background-color: #fff;
+}
+.badge {
+	font-size: 75%;
+	/*background-color: #f2eee0;*/
+	display: inline-block;
+	padding: 3px 8px;
+	margin: 10px 0px;
+	border-radius: 4px;
+    position: absolute;  /* Use absolute positioning */
+    top: 10px;  /* Position it at the top */
+    left: 50%;  /* Center it horizontally */
+    transform: translateX(-50%);  /* Adjust the position to center it */
+	font-weight: bold;
+}
