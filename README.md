@@ -1,0 +1,1 @@
+# strapiEC_store
